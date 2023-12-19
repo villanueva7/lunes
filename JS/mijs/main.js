@@ -162,3 +162,15 @@ const LEYENDA = L.control.Legend({
 		
 }).addTo(map);
 
+var imageUrl = 'https://scontent.flim38-1.fna.fbcdn.net/v/t39.30808-6/412390137_1130623744572741_793848380750960035_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=3635dc&_nc_eui2=AeE4GLfPQSTLlYv3Va3LAj1jYQz_0xEm82BhDP_TESbzYHm4TgMEeVJDe_Oqstjx0gqNgdIONg-Pu8WwDdVLVRN8&_nc_ohc=ksRT8zHvDfkAX_LYM4Z&_nc_ht=scontent.flim38-1.fna&oh=00_AfA_uyKF4E3LR_xU7SpN1WmYqtTSnHJXwgD7rPyH2jMpZw&oe=6586455F';
+var errorOverlayUrl = 'https://cdn-icons-png.flaticon.com/512/110/110686.png';
+var altText = 'Image of Newark, N.J. in 1922. Source: The University of Texas at Austin, UT Libraries Map Collection.';
+var latLngBounds = L.latLngBounds([[-11.9069, -76.5334], [-11.9148,-76.5258]]);
+
+var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
+    opacity: 1,
+    errorOverlayUrl: errorOverlayUrl,
+    alt: altText,
+    interactive: true
+}).addTo(map);
+
